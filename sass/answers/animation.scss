@@ -1,0 +1,46 @@
+$answers: 4;
+$time_per_answer: 10;
+$total_animation_time: $time_per_answer * $answers;
+
+.answers {
+  .answer {
+    animation: answer-round #{$total_animation_time}s infinite;
+  }
+
+  @keyframes answer-round {
+    1% {
+      opacity: 1;
+    }
+    24% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+  }
+
+  @for $index from 1 to $answers + 1 {
+    .answer:nth-child(#{$index}) {
+      animation-delay: #{$time_per_answer * ($index - 1)}s
+    }
+  }
+
+  @keyframes carousel-progress-round {
+    0% {
+      background-color: $black;
+    }
+    24% {
+      background-color: $black;
+    }
+    25% {
+      background-color: $orange;
+    }
+  }
+
+  @for $index from 1 to $answers + 1 {
+    .dot:nth-child(#{$index}) {
+      animation: carousel-progress-round #{$total_animation_time}s infinite;
+      animation-delay: #{$time_per_answer * ($index - 1)}s
+    }
+  }
+}

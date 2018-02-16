@@ -1,0 +1,134 @@
+footer {
+  background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
+}
+
+.footer {
+  padding-bottom: 72px;
+  display: grid;
+  grid-template-rows: 120px 147px 125px 1fr;
+  grid-template-areas: "caption" "social" "info" "form";
+  width: 90%;
+  margin: 0 auto;
+
+  .caption {
+    grid-area: caption;
+    align-self: end;
+  }
+
+  .social {
+    align-self: center;
+    grid-area: social;
+
+    .social-title {
+      display: none;
+    }
+
+    .fa {
+      color: $dark-gray;
+      width: 23px;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      font-size: 16px;
+      color: $orange;
+      line-height: 32px;
+    }
+
+    a:hover {
+      color: $light-orange;
+    }
+
+    a:active {
+      color: $dark-orange;
+    }
+  }
+
+  .info {
+    grid-area: info;
+    font-size: 16px;
+    color: $black;
+    line-height: 24px;
+  }
+
+  .form {
+    grid-area: form;
+
+    form {
+      display: grid;
+      grid-row-gap: 24px;
+    }
+
+    input {
+      display: block;
+      width: calc(100% - 16px);
+      padding-left: 16px;
+      min-width: 330px;
+      height: 48px;
+      background: $white;
+      border-radius: 4px;
+      border: 1px solid $white;
+      box-shadow: none;
+      outline: none;
+      font-size: 16px;
+    }
+
+    ::-webkit-input-placeholder {
+      color: #9E9E9E;
+    }
+
+    input:focus {
+      border: 1px solid #D3D9D4;
+    }
+
+    .comment {
+      font-size: 16px;
+      width: calc(100% - 32px);
+      padding: 11px 16px 0 16px;
+      min-width: 310px;
+      height: 192px;
+      resize: none;
+      background: #FFFFFF;
+      border-radius: 4px;
+      border: 1px solid #FFFFFF;
+      box-shadow: none;
+      outline: none;
+    }
+
+    .file {
+      display: none;
+    }
+
+    .file-label {
+      color: $orange;
+      font-size: 16px;
+      line-height: 24px;
+      font-weight: bold;
+
+      .fa {
+        width: 23px;
+      }
+    }
+
+    .submit {
+      height: 48px;
+      cursor: pointer;
+      background: $orange;
+      border-radius: 4px;
+      color: $white;
+      font-size: 16px;
+    }
+
+    .submit:hover {
+      background: $light-orange;
+    }
+
+    .submit:active {
+      background: $dark-orange;
+    }
+  }
+}

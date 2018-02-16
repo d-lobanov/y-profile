@@ -1,0 +1,10 @@
+.header {
+  grid-template-columns: 552px 554px;
+  grid-column-gap: 145px;
+
+  .avatar img {
+    width: 100%;
+    height: auto;
+    left: 0;
+  }
+}

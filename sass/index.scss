@@ -1,0 +1,28 @@
+@import "variables";
+@import "common";
+
+// Mobile
+@import "header/mobile";
+@import "answers/mobile";
+@import "footer/mobile";
+
+// Tablet
+@media screen and (min-width: 768px) {
+  @import "header/tablet";
+  @import "answers/tablet";
+  @import "footer/tablet";
+}
+
+// Laptop
+@media screen and (min-width: 1024px) {
+  @import "header/laptop";
+  @import "answers/laptop";
+  @import "footer/laptop";
+}
+
+// Desktop
+@media screen and (min-width: 1440px) {
+  @import "header/desktop";
+  @import "answers/desktop";
+  @import "footer/desktop";
+}

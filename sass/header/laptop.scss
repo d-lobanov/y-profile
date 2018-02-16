@@ -1,0 +1,35 @@
+.header {
+  padding: 0;
+  height: 672px;
+  grid-template-rows: 70px 50px 1fr;
+  grid-template-columns: 424px 464px;
+  grid-column-gap: 95px;
+  grid-template-areas: "avatar position" "avatar name" "avatar bio";
+
+  div {
+    justify-self: left;
+    text-align: left;
+    max-width: none;
+  }
+
+  .position {
+    align-self: end;
+  }
+
+  .name {
+    align-self: baseline;
+  }
+
+  .avatar {
+    height: 100%;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .avatar img {
+    width: auto;
+    height: 100%;
+    top: 0;
+    left: -60px;
+  }
+}

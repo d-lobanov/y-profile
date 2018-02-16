@@ -1,0 +1,64 @@
+@import "animation";
+
+.answers {
+  background: $white;
+  margin: 50px 0 50px 0;
+
+  .content {
+    margin: 0 auto;
+    width: 90%;
+    display: grid;
+    grid-template-rows: 70px 1fr 30px;
+    grid-template-areas: "caption" "carousel" "carousel-progress";
+  }
+
+  .caption {
+    align-self: center;
+    grid-area: caption;
+  }
+
+  .carousel {
+    grid-area: carousel;
+    height: 304px;
+    position: relative;
+
+    .answer {
+      background-image: linear-gradient(-180deg, #E6F0F0 0%, #E9F0E6 100%);
+      border-radius: 4px;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      display: grid;
+      grid-template: 54px 1fr / 24px 1fr 24px;
+      grid-gap: 24px 0px;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+
+      .answer__caption {
+        align-self: end;
+        grid-column-start: 2;
+      }
+
+      .answer__text {
+        grid-column-start: 2;
+      }
+    }
+  }
+
+  .carousel-progress {
+    grid-area: carousel-progress;
+    align-self: end;
+    margin: 0 auto;
+
+    .dot {
+      margin: 0 12px;
+      height: 8px;
+      width: 8px;
+      background-color: $orange;
+      border-radius: 50%;
+      display: inline-block;
+    }
+  }
+}

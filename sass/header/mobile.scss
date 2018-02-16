@@ -1,0 +1,51 @@
+.header {
+  width: 100%;
+  padding: 33px 0 42px 0;
+  display: grid;
+  background: #082841;
+  grid-template-rows: 19px 40px 165px;
+  grid-gap: 20px;
+  grid-template-areas: "position" "name" "avatar" "bio";
+  color: $white;
+
+  div {
+    max-width: 90%;
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .position {
+    font-size: 16px;
+    grid-area: position;
+  }
+
+  .name {
+    font-size: 32px;
+    line-height: 40px;
+    grid-area: name;
+  }
+
+  .avatar {
+    align-self: baseline;
+    height: 145px;
+    width: 145px;
+    overflow: hidden;
+    border-radius: 50%;
+    position: relative;
+    grid-area: avatar;
+  }
+
+  .avatar img {
+    position: absolute;
+    height: 300%;
+    top: -56px;
+    left: -102px;
+  }
+
+  .bio {
+    font-size: 18px;
+    line-height: 24px;
+    grid-area: bio;
+  }
+}

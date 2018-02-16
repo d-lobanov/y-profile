@@ -1,0 +1,26 @@
+.footer {
+  grid-template: 150px 148px 1fr / 304px 1fr 544px;
+  grid-template-areas: "caption caption caption" "info . form" "social . form";
+  grid-column-gap: 0;
+  margin: 0 auto;
+  width: 90%;
+  max-width: 1150px;
+
+  .caption {
+    align-self: center;
+    font-size: 40px;
+  }
+
+  .social {
+    align-self: baseline;
+
+    .social-title {
+      display: block;
+      padding-bottom: 7px;
+    }
+  }
+
+  .form {
+    grid-column-start: 3;
+  }
+}

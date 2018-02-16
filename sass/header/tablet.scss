@@ -1,0 +1,29 @@
+.header {
+  padding: 50px 0 100px 0;
+  grid-template-rows: 29px 48px 410px;
+  grid-gap: 20px;
+  grid-template-areas: "position" "name" "avatar" "bio";
+
+  div {
+    max-width: 70%;
+  }
+
+  .position {
+    font-size: 24px;
+  }
+
+  .name {
+    font-size: 40px;
+  }
+
+  .avatar {
+    height: 384px;
+    width: 384px;
+  }
+
+  .avatar img {
+    top: -35px;
+    left: -80px;
+    height: auto;
+  }
+}
