@@ -10,6 +10,11 @@ footer {
   width: 90%;
   margin: 0 auto;
 
+  .icon {
+    width: 23px;
+    display: inline-block;
+  }
+
   .caption {
     grid-area: caption;
     align-self: end;
@@ -23,9 +28,8 @@ footer {
       display: none;
     }
 
-    .fa {
+    .icon {
       color: $dark-gray;
-      width: 23px;
     }
 
     ul {
@@ -104,14 +108,19 @@ footer {
     }
 
     .file-label {
+      cursor: pointer;
       color: $orange;
       font-size: 16px;
       line-height: 24px;
       font-weight: bold;
+    }
 
-      .fa {
-        width: 23px;
-      }
+    .file-label:hover {
+      color: $light-orange;
+    }
+
+    .file-label:active {
+      color: $dark-orange;
     }
 
     .submit {
