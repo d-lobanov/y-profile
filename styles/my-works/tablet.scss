@@ -2,7 +2,7 @@
   .content {
     .work-example {
       margin-top: 70px;
-      grid-template-rows: 29px 1fr 530px 50px;
+      grid-template-rows: 29px 1fr 400px;
       grid-template-columns: 40% 1fr;
       grid-template-areas: "title description" "link description" "carousel carousel" "carousel-progress carousel-progress";
       grid-gap: 5px;
@@ -16,12 +16,7 @@
       }
 
       .carousel {
-        height: 500px;
-        align-self: end;
-      }
-
-      .carousel-progress {
-        align-self: center;
+        height: 100%;
       }
     }
   }
