@@ -1,0 +1,17 @@
+@mixin placeholder($elementName) {
+  #{$elementName}::-webkit-input-placeholder {
+    @content;
+  }
+
+  #{$elementName}:-ms-input-placeholder {
+    @content;
+  }
+
+  #{$elementName}:-moz-placeholder {
+    @content;
+  }
+
+  #{$elementName}::-moz-placeholder {
+    @content;
+  }
+}

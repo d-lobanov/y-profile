@@ -3,7 +3,9 @@
 
 @import "variables";
 @import "common";
-@import "carousel-animation";
+
+@import "mixins/carousel-animation";
+@import "mixins/placeholder";
 
 // Mobile
 @import "header/mobile";
