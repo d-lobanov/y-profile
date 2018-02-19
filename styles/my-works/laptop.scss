@@ -1,0 +1,26 @@
+.my-works {
+  .content {
+    max-width: 1150px;
+
+    .work-example {
+      margin-top: 135px;
+      grid-template-rows: 29px 24px 300px;
+      grid-template-columns: 60% 1fr 35%;
+      grid-template-areas: "carousel carousel-progress title" "carousel carousel-progress link" "carousel carousel-progress description";
+      grid-gap: 5px;
+
+      .carousel {
+        height: 100%;
+        align-self: center;
+      }
+
+      .description {
+        align-self: end;
+      }
+
+      .carousel-progress {
+        align-self: center;
+      }
+    }
+  }
+}

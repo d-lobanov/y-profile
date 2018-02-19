@@ -3,16 +3,19 @@
 
 @import "variables";
 @import "common";
+@import "carousel-animation";
 
 // Mobile
 @import "header/mobile";
 @import "answers/mobile";
+@import "my-works/mobile";
 @import "footer/mobile";
 
 // Tablet
 @media screen and (min-width: 768px) {
   @import "header/tablet";
   @import "answers/tablet";
+  @import "my-works/tablet";
   @import "footer/tablet";
 }
 
@@ -20,6 +23,7 @@
 @media screen and (min-width: 1024px) {
   @import "header/laptop";
   @import "answers/laptop";
+  @import "my-works/laptop";
   @import "footer/laptop";
 }
 
@@ -27,5 +31,6 @@
 @media screen and (min-width: 1440px) {
   @import "header/desktop";
   @import "answers/desktop";
+  @import "my-works/desktop";
   @import "footer/desktop";
 }

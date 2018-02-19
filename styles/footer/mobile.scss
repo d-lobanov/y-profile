@@ -35,21 +35,6 @@ footer {
     ul {
       list-style: none;
     }
-
-    a {
-      text-decoration: none;
-      font-size: 16px;
-      color: $orange;
-      line-height: 32px;
-    }
-
-    a:hover {
-      color: $light-orange;
-    }
-
-    a:active {
-      color: $dark-orange;
-    }
   }
 
   .info {
@@ -101,6 +86,10 @@ footer {
       border: 1px solid #FFFFFF;
       box-shadow: none;
       outline: none;
+    }
+
+    .comment:focus {
+      border: 1px solid #D3D9D4;
     }
 
     .file {

@@ -1,0 +1,28 @@
+.my-works {
+  .content {
+    .work-example {
+      margin-top: 70px;
+      grid-template-rows: 29px 1fr 530px 50px;
+      grid-template-columns: 40% 1fr;
+      grid-template-areas: "title description" "link description" "carousel carousel" "carousel-progress carousel-progress";
+      grid-gap: 5px;
+
+      &:nth-child(2) {
+        margin-top: 50px;
+      }
+
+      .description {
+        margin-top: 10px;
+      }
+
+      .carousel {
+        height: 500px;
+        align-self: end;
+      }
+
+      .carousel-progress {
+        align-self: center;
+      }
+    }
+  }
+}

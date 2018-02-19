@@ -1,0 +1,58 @@
+@mixin carousel-animation($elementName, $numberOfSlides) {
+  $timePerSlide: 4;
+  $totalAnimationTime: $timePerSlide * $numberOfSlides;
+  $oneRoundInPercents: 100 / $numberOfSlides;
+
+  @keyframes #{$elementName}-round {
+    0% {
+      opacity: 0;
+    }
+
+    #{$oneRoundInPercents * 0.2 + '%'} {
+      opacity: 1;
+    }
+
+    #{$oneRoundInPercents * 0.8 + '%'} {
+      opacity: 1;
+    }
+
+    #{$oneRoundInPercents + '%'} {
+      opacity: 0;
+    }
+  }
+
+  .#{$elementName} {
+    animation: #{$elementName}-round #{$totalAnimationTime}s infinite;
+    opacity: 0;
+  }
+
+  @for $index from 1 to $numberOfSlides + 1 {
+    .#{$elementName}:nth-child(#{$index}) {
+      animation-delay: #{$timePerSlide * ($index - 1)}s
+    }
+  }
+
+  @keyframes #{$elementName}-progress-round {
+    0% {
+      background-color: $black;
+    }
+
+    #{$oneRoundInPercents * 0.99 + '%'} {
+      background-color: $black;
+    }
+
+    #{$oneRoundInPercents + '%'} {
+      background-color: $orange;
+    }
+  }
+
+  .carousel-progress .dot {
+    animation: #{$elementName}-progress-round #{$totalAnimationTime}s infinite;
+  }
+
+  @for $index from 1 to $numberOfSlides + 1 {
+    .carousel-progress .dot:nth-child(#{$index}) {
+      animation-delay: #{$timePerSlide * ($index - 1)}s
+    }
+  }
+}

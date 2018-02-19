@@ -1,0 +1,66 @@
+.my-works {
+  margin: 0 auto;
+  width: 90%;
+
+  .content {
+    background: $white;
+    margin: 50px 0 70px 0;
+
+    .work-example {
+      display: grid;
+      grid-template-rows: 29px 24px 1fr 300px;
+      grid-template-areas: "title" "link" "description" "carousel" "carousel-progress";
+      grid-gap: 10px;
+      width: 100%;
+      margin-top: 40px;
+
+      &:nth-child(2) {
+        margin-top: 36px;
+      }
+
+      .title {
+        grid-area: title;
+      }
+
+      .link {
+        grid-area: link;
+      }
+
+      .description {
+        font-size: 20px;
+        grid-area: description;
+      }
+
+      @include carousel-animation('slide', 2);
+
+      .slide {
+        opacity: 0;
+      }
+
+      .carousel {
+        font-size: 20px;
+        position: relative;
+        grid-area: carousel;
+
+        img {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+          border-radius: 8px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          margin: auto;
+          display: block;
+          max-height: 100%;
+          max-width: 100%;
+        }
+      }
+
+      .carousel-progress {
+        margin: 0 auto;
+        grid-area: carousel-progress;
+      }
+    }
+  }
+}
