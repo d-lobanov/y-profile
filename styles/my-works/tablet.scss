@@ -2,7 +2,7 @@
   .content {
     .work-example {
       margin-top: 70px;
-      grid-template-rows: 29px 1fr 600px;
+      grid-template-rows: 29px 1fr;
       grid-template-columns: 40% 1fr;
       grid-template-areas: "title description" "link description" "carousel carousel" "carousel-progress carousel-progress";
       grid-gap: 5px;
@@ -16,12 +16,12 @@
       }
 
       .carousel {
-        height: 100%;
+        width: 100%;
+        padding-top: 70%;
 
         img {
           width: 100%;
           height: auto;
-          max-width: 800px;
         }
       }
     }
