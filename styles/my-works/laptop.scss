@@ -4,17 +4,19 @@
 
     .work-example {
       margin-top: 135px;
-      grid-template-rows: 29px 24px 300px;
-      grid-template-columns: 60% 1fr 35%;
-      grid-template-areas: "carousel carousel-progress title" "carousel carousel-progress link" "carousel carousel-progress description";
+      grid-template-rows: 29px 24px 350px;
+      grid-template-columns: 570px 50px 1fr 30%;
+      grid-template-areas: "carousel carousel-progress . title" "carousel carousel-progress . link" "carousel carousel-progress . description";
       grid-gap: 5px;
 
       .carousel {
         align-self: center;
 
         img {
-          width: auto;
-          height: 100%;
+          width: 570px;
+          height: auto;
+          right: inherit;
+          left: 0;
         }
       }
 
@@ -24,6 +26,16 @@
 
       .carousel-progress {
         align-self: center;
+      }
+
+      &:nth-child(odd) {
+        grid-template-columns: 30% 1fr 50px 570px;
+        grid-template-areas: "title . carousel-progress carousel" "link . carousel-progress carousel" "description . carousel-progress carousel";
+
+        img {
+          right: 0;
+          left: inherit;
+        }
       }
     }
   }
